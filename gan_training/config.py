@@ -7,12 +7,12 @@ from gan_training.train import toggle_grad
 
 # General config
 def load_config(path, default_path):
-    ''' Loads config file.
+    """ Loads config file.
 
-    Args:  
+    Args:
         path (str): path to config file
         default_path (bool): whether to use default path
-    '''
+    """
     # Load configuration from file itself
     with open(path, 'r') as f:
         cfg_special = yaml.load(f)
@@ -37,13 +37,13 @@ def load_config(path, default_path):
 
 
 def update_recursive(dict1, dict2):
-    ''' Update two config dictionaries recursively.
+    """ Update two config dictionaries recursively.
 
     Args:
         dict1 (dict): first dictionary to be updated
         dict2 (dict): second dictionary which entries should be used
 
-    '''
+    """
     for k, v in dict2.items():
         # Add item if not yet in dict1
         if k not in dict1:
